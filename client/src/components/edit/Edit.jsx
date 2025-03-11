@@ -2,9 +2,9 @@ import React from 'react'
 
 function Edit() {
   return (
-    <section id="edit-page" classname="auth">
+    <section id="edit-page" className="auth">
     <form id="edit">
-      <div classname="container">
+      <div className="container">
         <h1>Edit Game</h1>
         <label htmlfor="leg-title">Legendary title:</label>
         <input type="text" id="title" name="title" defaultValue="" />/{" "}
@@ -24,7 +24,7 @@ function Edit() {
         <label htmlfor="summary">Summary:</label>
         <textarea name="summary" id="summary" defaultValue={""} />
         <input
-          classname="btn submit"
+          className="btn submit"
           type="submit"
           defaultValue="Edit Game"
         />
