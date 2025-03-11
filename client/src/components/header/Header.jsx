@@ -3,7 +3,7 @@
 function Header  () {
   return (
     <header>
-    {/* Navigation */}
+   
     <h1> 
       <Link className="home" to="/" >
         GamesPlay
