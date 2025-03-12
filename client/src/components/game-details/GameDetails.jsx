@@ -58,7 +58,7 @@ const gameDeleteClickHandler = async()=>{
       </div>
       {/* Edit/Delete buttons ( Only htmlFor= creator of this game )  */}
       <div className="buttons">
-        <Link href="#" className="button">
+        <Link to={`/games/${gameId}/edit`} className="button">
           Edit
         </Link>
         <button onClick={gameDeleteClickHandler} className="button">
