@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 function GameCatalogItem( {
-    title, category, imageUrl
+    _id, title, category, imageUrl
 }) {
   return (
     <div className="allGames">
@@ -9,9 +10,9 @@ function GameCatalogItem( {
       <img src={imageUrl} />
       <h6>{category}</h6>
       <h2>{title}</h2>
-      <a href="#" className="details-button">
+      <Link to={`/games/${_id}/details`} className="details-button">
         Details
-      </a>
+      </Link>
     </div>
   </div>
   )
