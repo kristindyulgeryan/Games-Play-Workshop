@@ -34,8 +34,6 @@ function App() {
   <Route path='/login' element={<Login onLogin={userLoginHandler}/>}/>
   <Route path='/register' element={<Register/>}/>
  
-  
-  
 </Routes>
 
  </main>

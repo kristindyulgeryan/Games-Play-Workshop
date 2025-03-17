@@ -6,6 +6,7 @@ import CommentsCreate from '../comments-create/CommentsCreate.jsx'
 
 export default function GameDetails({
   email,
+
 }) {
 const navigate = useNavigate()
   const[game, setGame] = useState({})
@@ -59,7 +60,7 @@ const gameDeleteClickHandler = async()=>{
     </div>
    
     
-    <CommentsCreate email={email}/>
+    <CommentsCreate email={email} gameId={gameId}/>
   </section>
   )
 }
