@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
 import gameService from '../../services/gameService.js'
+import CommentsShow from '../comments-show/CommentsShow.jsx'
+import CommentsCreate from '../comments-create/CommentsCreate.jsx'
 
 export default function GameDetails() {
 const navigate = useNavigate()
@@ -41,22 +43,9 @@ const gameDeleteClickHandler = async()=>{
       <p className="text">
       {game.summary}
       </p>
-      {/* Bonus ( htmlFor= Guests and Users ) */}
-      <div className="details-comments">
-        <h2>Comments:</h2>
-        <ul>
-          {/* list all comments htmlFor= current game (If any) */}
-          <li className="comment">
-            <p>Content: I rate this one quite highly.</p>
-          </li>
-          <li className="comment">
-            <p>Content: The best game.</p>
-          </li>
-        </ul>
-        {/* Display paragraph: If there are no games in the database */}
-        <p className="no-comment">No comments.</p>
-      </div>
-      {/* Edit/Delete buttons ( Only htmlFor= creator of this game )  */}
+   
+   <CommentsShow/>
+     
       <div className="buttons">
         <Link to={`/games/${gameId}/edit`} className="button">
           Edit
@@ -66,23 +55,9 @@ const gameDeleteClickHandler = async()=>{
         </button>
       </div>
     </div>
-    {/* Bonus */}
-    {/* Add Comment ( Only htmlFor= logged-in users, which is not creators of the current game ) */}
-    <article className="create-comment">
-      <label>Add new comment:</label>
-      <form className="form">
-        <textarea
-          name="comment"
-          placeholder="Comment......"
-          defaultValue={""}
-        />
-        <input
-          className="btn submit"
-          type="submit"
-          defaultValue="Add Comment"
-        />
-      </form>
-    </article>
+   
+    
+    <CommentsCreate/>
   </section>
   )
 }
